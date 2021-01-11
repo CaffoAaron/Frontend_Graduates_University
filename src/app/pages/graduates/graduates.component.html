@@ -8,16 +8,16 @@
       <mat-grid-tile>
         <form (submit)="onSubmit()" #studentForm="ngForm">
           <mat-form-field>
-            <input matInput placeholder="Name" name="year" required [(ngModel)]="studentData.year">
+            <input matInput placeholder="Year" name="name" required [(ngModel)]="studentData.year">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Floor" name="sex" type="number" required [(ngModel)]="studentData.sex">
+            <input matInput placeholder="Sex" name="age" required [(ngModel)]="studentData.sex">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Pieces" name="Course" required [(ngModel)]="studentData.Course">
+            <input matInput placeholder="Course" name="address" required [(ngModel)]="studentData.Course">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Pieces" name="Graduates" required [(ngModel)]="studentData.Graduates">
+            <input matInput placeholder="Graduates" name="address" required [(ngModel)]="studentData.Graduates">
           </mat-form-field>
           <ng-container *ngIf="isEditMode; else elseTemplate">
             <button mat-button color="primary">Update</button>
@@ -40,17 +40,17 @@
         <th mat-header-cell *matHeaderCellDef> #Id </th>
         <td mat-cell *matCellDef="let element"> {{ element.id }}</td>
       </ng-container>
-      <ng-container matColumnDef="year">
-        <th mat-header-cell *matHeaderCellDef> Year </th>
-        <td mat-cell *matCellDef="let element"> {{ element.year }}</td>
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{ element.name }}</td>
       </ng-container>
-      <ng-container matColumnDef="sex">
-        <th mat-header-cell *matHeaderCellDef> Sex </th>
-        <td mat-cell *matCellDef="let element"> {{ element.sex }}</td>
+      <ng-container matColumnDef="age">
+        <th mat-header-cell *matHeaderCellDef> Floor </th>
+        <td mat-cell *matCellDef="let element"> {{ element.floor }}</td>
       </ng-container>
-      <ng-container matColumnDef="Course">
-        <th mat-header-cell *matHeaderCellDef> Course </th>
-        <td mat-cell *matCellDef="let element"> {{ element.Course }}</td>
+      <ng-container matColumnDef="address">
+        <th mat-header-cell *matHeaderCellDef> Pieces </th>
+        <td mat-cell *matCellDef="let element"> {{ element.pieces }}</td>
       </ng-container>
       <ng-container matColumnDef="actions">
         <th mat-header-cell *matHeaderCellDef> Actions </th>

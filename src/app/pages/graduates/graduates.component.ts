@@ -1,11 +1,12 @@
 import {AfterViewInit, Component, OnInit, ViewChild} from '@angular/core';
-import {MatTableDataSource} from '@angular/material/table';
-import {Graduate} from '../../models/graduate';
-import {NgForm} from '@angular/forms';
-import {MatPaginator} from '@angular/material/paginator';
-import {MatSort} from '@angular/material/sort';
+import { NgForm } from '@angular/forms';
+import { MatTableDataSource } from '@angular/material/table';
+import { MatPaginator } from '@angular/material/paginator';
+import { MatSort } from '@angular/material/sort';
+import { HttpDataService } from '../../services/http-data.service';
 import * as _ from 'lodash';
-import {HttpDataService} from '../../services/http-data.service';
+import {Graduate} from '../../models/graduate';
+
 
 @Component({
   selector: 'app-graduates',
@@ -17,7 +18,7 @@ export class GraduatesComponent implements OnInit, AfterViewInit {
   studentForm: NgForm;
   studentData: Graduate;
   dataSource = new MatTableDataSource();
-  displayedColumns: string[] = ['id', 'year', 'sex', 'Course', 'Graduates'];
+  displayedColumns: string[] = ['id', 'name', 'age', 'address', 'actions'];
   @ViewChild(MatPaginator) paginator: MatPaginator;
   @ViewChild(MatSort) sort: MatSort;
   isEditMode = false;
