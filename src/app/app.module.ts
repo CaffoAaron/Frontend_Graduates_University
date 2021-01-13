@@ -12,15 +12,17 @@ import {MatCardModule} from '@angular/material/card';
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatInputModule} from '@angular/material/input';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {HttpClientModule} from '@angular/common/http';
+import { LoginFormComponent } from './pages/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GraduatesComponent
+    GraduatesComponent,
+    LoginFormComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +38,8 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    HttpClientModule
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

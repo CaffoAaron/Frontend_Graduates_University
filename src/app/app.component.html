@@ -1,10 +1,6 @@
 <mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span>data.gov.sg</span>
-    <span class="default-spacer"></span>
-    <div>
-      <a mat-flat-button color="primary" routerLink="/home" routerLinkActive="active">Home</a>
-    </div>
-  </mat-toolbar-row>
+  <span style="size: letter">data.gov.sg</span>
+  <button mat-button *ngIf="isLoggedIn" routerLink="/home" routerLinkActive="active">Table</button>
+  <a mat-button *ngIf="isLoggedIn" href (click)="logout()">Cerrar Sesión</a>
 </mat-toolbar>
 <router-outlet></router-outlet>
