@@ -65,7 +65,8 @@ export class GraduatesComponent implements OnInit, AfterViewInit {
     console.log(this.dataSource.data);
   }
   addStudent(): void {
-    const newStudent = {year: this.studentData.year, sex: this.studentData.sex, Course: this.studentData.Course};
+    // tslint:disable-next-line:max-line-length
+    const newStudent = {year: this.studentData.year, sex: this.studentData.sex, course: this.studentData.course, graduates: this.studentData.graduates};
     this.httpDataService.createItem(newStudent).subscribe((response: any) => {
       this.dataSource.data.push({...response});
       this.dataSource.data = this.dataSource.data.map(o => o);
